@@ -30,10 +30,7 @@ class IndexPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Padding(
-        padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
-        child: MyDrawer(),
-      ),
+      drawer: const MyDrawer(),
       floatingActionButton: FloatingActionButton(
         tooltip: 'Go to bookmark',
         child: const Icon(Icons.bookmark),
@@ -79,9 +76,8 @@ class IndexPage extends StatelessWidget {
           BuildContext context,
           AsyncSnapshot snapshot,
         ) {
-          //print(snapshot.connectionState);
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const CircularProgressIndicator();
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.connectionState == ConnectionState.done) {
             if (snapshot.hasError) {
               return const Text('Error');

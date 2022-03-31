@@ -1,4 +1,4 @@
-import 'package:Quran/constants_variables.dart';
+import 'package:quran/constants_variables.dart';
 import 'package:flutter/material.dart';
 import 'about.dart';
 import 'constants_variables.dart';
@@ -29,7 +29,9 @@ class MyDrawer extends StatelessWidget {
           //   ),
           //   child: null
           // ),
-
+          const SizedBox(
+            height: 80,
+          ),
           ListTile(
             leading: const Icon(
               Icons.settings,
@@ -86,7 +88,9 @@ Download from https://play.google.com/store/apps/details?id=org.ahlussunnabooks.
               'Rate',
             ),
             onTap: () async {
-              if (!await launch(quranAppurl)) throw 'Could not launch $quranAppurl';
+              if (!await launch(quranAppurl)) {
+                throw 'Could not launch $quranAppurl';
+              }
             },
           ),
           ListTile(

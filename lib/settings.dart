@@ -102,6 +102,42 @@ class _SettingsState extends State<Settings> {
                         fontFamily: 'quran', fontSize: mushafFontSize),
                     textDirection: TextDirection.rtl,
                   ),
+                  // const Padding(
+                  //   padding: EdgeInsets.only(top: 10, bottom: 10),
+                  //   child: Divider(),
+                  // ),
+                  // const Text(
+                  //   'Index Numbering System:',
+                  //   style: TextStyle(
+                  //     fontWeight: FontWeight.bold,
+                  //     fontSize: 15,
+                  //   ),
+                  // ),
+                  // ListTile(
+                  //   leading: Radio<bool>(
+                  //     value: true,
+                  //     groupValue: numberSystem,
+                  //     onChanged: (value) {
+                  //       setState(() {
+                  //         numberSystem = value!;
+                  //       });
+                  //     },
+                  //   ),
+                  //   title: const Text('Arabic'),
+                  // ),
+                  // ListTile(
+                  //   leading: Radio<bool>(
+                  //     value: false,
+                  //     groupValue: numberSystem,
+                  //     onChanged: (value) {
+                  //       setState(() {
+                  //         numberSystem = value!;
+                  //       });
+                  //     },
+                  //   ),
+                  //   title: const Text('English'),
+                  // ),
+                
                   const SizedBox(
                     height: 20,
                   ),
@@ -114,6 +150,7 @@ class _SettingsState extends State<Settings> {
                               arabicFontSize = 28;
                               mushafFontSize = 40;
                               malayalamFontSize = 15;
+                              numberSystem = true;
                             });
 
                             saveSettings();
@@ -127,7 +164,9 @@ class _SettingsState extends State<Settings> {
                           },
                           child: const Text('Save')),
                     ],
-                  )
+                  ),
+
+                  //const Text('*Some settings will take effect after restart'),
                 ],
               ),
             ),
@@ -142,5 +181,6 @@ class _SettingsState extends State<Settings> {
     await prefs.setInt('arabicFontSize', arabicFontSize.toInt());
     await prefs.setInt('malayalamFontSize', malayalamFontSize.toInt());
     await prefs.setInt('mushafFontSize', mushafFontSize.toInt());
+    await prefs.setBool('numberSystem', numberSystem);
   }
 }

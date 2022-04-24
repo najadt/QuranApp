@@ -270,7 +270,7 @@ class _SuraBuilderState extends State<SuraBuilder> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    widget.malayalam[index + previousVerses]['text'],
+                    widget.malayalam[index + previousVerses]['text'] + ' '+'('+(index+1).toString()+')',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       color: Colors.black87,
@@ -278,6 +278,7 @@ class _SuraBuilderState extends State<SuraBuilder> {
                       height: 1.5,
                       fontSize: malayalamFontSize,
                     ),
+
                   ),
                 ],
               ),

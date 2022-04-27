@@ -23,14 +23,20 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          // const DrawerHeader(
-          //   decoration: BoxDecoration(
-          //     color: Colors.white,
-          //   ),
-          //   child: null
-          // ),
-          const SizedBox(
-            height: 80,
+          DrawerHeader(
+            decoration: const BoxDecoration(
+              color: Colors.white,
+            ),
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/quran.png',
+                  height: 80,
+                ),
+               const Text('Al Quran',style: TextStyle(fontSize: 20),),
+               const Text('മലയാളം അർത്ഥസഹിതം')
+              ],
+            ),
           ),
           ListTile(
             leading: const Icon(

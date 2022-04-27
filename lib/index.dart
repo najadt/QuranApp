@@ -101,7 +101,6 @@ class _IndexPageState extends State<IndexPage> {
   }
 
   Container indexCreator(quran, context) {
-
     return Container(
       color: const Color.fromARGB(255, 221, 250, 236),
       child: ListView(
@@ -114,7 +113,14 @@ class _IndexPageState extends State<IndexPage> {
               child: TextButton(
                 child: Row(
                   children: [
-                    numberSystem ? ArabicSuraNumbers(i: i):Text("${i+1}.",style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                    numberSystem
+                        ? ArabicSuraNumbers(i: i)
+                        : Text(
+                            "${i + 1}.",
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
                     const SizedBox(
                       width: 5,
                     ),
@@ -125,9 +131,10 @@ class _IndexPageState extends State<IndexPage> {
                         children: [
                           Text(
                             suraNamesMalayalam[i],
-                            style:const TextStyle(color: Colors.black),
+                            style: const TextStyle(color: Colors.black),
                           ),
-                          // Text(quran[0][i]['sura_name_en'],
+
+                          // Text(quran[0][hi]['sura_name_en'],
                           //     style: TextStyle(
                           //         fontSize: 10, color: Colors.black45)),
                         ],

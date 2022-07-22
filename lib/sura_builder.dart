@@ -1,5 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, prefer_typing_uninitialized_variab, must_be_immutable, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables
 
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'sura_names.dart';
@@ -42,7 +44,7 @@ class _SuraBuilderState extends State<SuraBuilder> {
 
   @override
   void initState() {
-    WidgetsBinding.instance!.addPostFrameCallback((_) => jumbtoAyah());
+    WidgetsBinding.instance.addPostFrameCallback((_) => jumbtoAyah());
     super.initState();
   }
 
@@ -68,7 +70,17 @@ class _SuraBuilderState extends State<SuraBuilder> {
         appBar: AppBar(
           // flexibleSpace: Image(
           // image: AssetImage('assets/surahBackground.png')),
-
+          // actions: [
+          //   TextButton(
+          //     child: const Icon(
+          //       Icons.chrome_reader_mode,
+          //       color: Colors.white,
+          //     ),
+          //     onPressed: () {
+          //       nextSurah(context, LengthOfSura);
+          //     },
+          //   ),
+          // ],
           leading: Tooltip(
             message: 'Mushaf Mode',
             child: TextButton(
@@ -270,7 +282,11 @@ class _SuraBuilderState extends State<SuraBuilder> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    widget.malayalam[index + previousVerses]['text'] + ' '+'('+(index+1).toString()+')',
+                    widget.malayalam[index + previousVerses]['text'] +
+                        ' ' +
+                        '(' +
+                        (index + 1).toString() +
+                        ')',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       color: Colors.black87,
@@ -278,7 +294,6 @@ class _SuraBuilderState extends State<SuraBuilder> {
                       height: 1.5,
                       fontSize: malayalamFontSize,
                     ),
-
                   ),
                 ],
               ),
@@ -296,6 +311,13 @@ class _SuraBuilderState extends State<SuraBuilder> {
     //print(surah);
     //print(ayah);
   }
+
+  // void nextSurah(Context, len) {
+  //   // Navigator.pop(Context);
+  //   setState(() {
+  //     SingleSuraBuilder(len + 1);
+  //   });
+  // }
 }
 
 class ReturnBasmala extends StatelessWidget {
@@ -307,7 +329,7 @@ class ReturnBasmala extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: [
       const Center(
-        child:  Text(
+        child: Text(
           'بسم الله الرحمن الرحيم',
           style: TextStyle(fontFamily: 'me_quran', fontSize: 30),
           textDirection: TextDirection.rtl,

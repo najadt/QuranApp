@@ -4,6 +4,7 @@ description: quran app with malayalam meaning
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -15,7 +16,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 2.0.8+9
+version: 2.1.4+6
 
 environment:
   sdk: ">=2.18.2 <3.0.0"
@@ -33,12 +34,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  scrollable_positioned_list: ^0.3.8
-  shared_preferences: ^2.2.0
-  share_plus: 4.0.3
-  http: ^1.1.0
-  #new_version_plus: ^0.0.4
-  url_launcher: ^6.1.12
+  scrollable_positioned_list: ^0.2.3
+  shared_preferences: ^2.0.13
+  share_plus: ^4.0.3
+  http: ^0.13.4
+  new_version: ^0.3.0
 
 dev_dependencies:
   flutter_test:
@@ -63,18 +63,15 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/hafs_smart_v8.json
-    - assets/me_quran.ttf
-    - assets/uthmanic_hafs_v20.ttf
-    #- HafsSmart_08.ttf
-    - assets/ML-TTKarthikaNormal.ttf
-    - assets/ahlussunna_voice_logo.jpg
-    - assets/awraad.png
-    - assets/quran.png
-    - assets/duaFromQuran.png
-    - assets/paypal_donate_button.png
-    - assets/upi_payments.png
-    - assets/WhatsApp-PNG-Picture.png
+    - hafs_smart_v8.json
+    - me_quran.ttf
+    - HafsSmart_08.ttf
+    - ML-TTKarthikaNormal.ttf
+    - ahlussunna_voice_logo.jpg
+    - awraad.png
+    - quran.png
+    - makka.png
+    - madeena.png
 
   #   - images/a_dot_ham.jpeg
 
@@ -92,12 +89,14 @@ flutter:
   fonts:
     - family: quran
       fonts:
-        - asset: assets/uthmanic_hafs_v20.ttf
+        - asset: assets/HafsSmart_08.ttf
     - family: me_quran
       fonts:
         - asset: assets/me_quran.ttf
+        - asset: assets/me_quran.ttf
     - family: malayalam
       fonts:
+        - asset: assets/ML-TTKarthikaNormal.ttf
         - asset: assets/ML-TTKarthikaNormal.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

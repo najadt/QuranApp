@@ -115,6 +115,921 @@ List<String> suraNamesMalayalam = [
   'അൻ‍-നാസ്',
 ];
 
+List englishName = [
+    {
+        "No.": "1",
+        "Name": "Al-Fatihah",
+        "Meaning in English": "The Opening",
+        "Verses": "7",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "2",
+        "Name": "Al-Baqarah",
+        "Meaning in English": "The Calf, The Cow",
+        "Verses": "286",
+        "Rukus": "40",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "3",
+        "Name": "Ale Imran",
+        "Meaning in English": "The Family of Imran, The House of 'Imrán",
+        "Verses": "200",
+        "Rukus": "20",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "4",
+        "Name": "An-Nisa'",
+        "Meaning in English": "The Women",
+        "Verses": "176",
+        "Rukus": "24",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "5",
+        "Name": "Al-Ma'idah",
+        "Meaning in English": "The Food, The Repast, The Table",
+        "Verses": "120",
+        "Rukus": "16",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "6",
+        "Name": "Al-An'am",
+        "Meaning in English": "The Cattle",
+        "Verses": "165",
+        "Rukus": "20",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "7",
+        "Name": "Al-A'raf",
+        "Meaning in English": "The Heights, The Faculty of Discernment",
+        "Verses": "206",
+        "Rukus": "24",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "8",
+        "Name": "Al-Anfal",
+        "Meaning in English": "The Spoils of War",
+        "Verses": "75",
+        "Rukus": "10",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "9",
+        "Name": "At-Tawbah",
+        "Meaning in English": "The Repentance",
+        "Verses": "129",
+        "Rukus": "16",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "10",
+        "Name": "Yunus",
+        "Meaning in English": "Yunus ('Alaihi Salam)",
+        "Verses": "109",
+        "Rukus": "11",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "11",
+        "Name": "Hud",
+        "Meaning in English": "Hud ('Alaihis Salaam)",
+        "Verses": "123",
+        "Rukus": "10",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "12",
+        "Name": "Yusuf",
+        "Meaning in English": "Joseph ('Alaihis Salaam)",
+        "Verses": "111",
+        "Rukus": "12",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "13",
+        "Name": "Ar-Ra'd",
+        "Meaning in English": "The Thunder",
+        "Verses": "43",
+        "Rukus": "6",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "14",
+        "Name": "Ibraheem",
+        "Meaning in English": "Abraham ('Alaihis Salaam)",
+        "Verses": "52",
+        "Rukus": "7",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "15",
+        "Name": "Al-Hijr",
+        "Meaning in English": "The Rocky Tract, The Stoneland, The Rock City, Al-Hijr",
+        "Verses": "99",
+        "Rukus": "6",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "16",
+        "Name": "An-Nahl",
+        "Meaning in English": "The Honey Bees, The Bee",
+        "Verses": "128",
+        "Rukus": "16",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "17",
+        "Name": "Al-Isra",
+        "Meaning in English": "The Night Journey",
+        "Verses": "111",
+        "Rukus": "12",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "18",
+        "Name": "Al-Kahf",
+        "Meaning in English": "The Cave",
+        "Verses": "110",
+        "Rukus": "12",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "19",
+        "Name": "Maryam",
+        "Meaning in English": "Mary",
+        "Verses": "98",
+        "Rukus": "6",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "20",
+        "Name": "Ta-Ha",
+        "Meaning in English": "Ta-Ha",
+        "Verses": "135",
+        "Rukus": "8",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "21",
+        "Name": "Al-Anbiya'",
+        "Meaning in English": "The Prophets",
+        "Verses": "112",
+        "Rukus": "7",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "22",
+        "Name": "Al-Hajj",
+        "Meaning in English": "The Pilgrimage",
+        "Verses": "78",
+        "Rukus": "10",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "23",
+        "Name": "Al-Mu'minoon",
+        "Meaning in English": "The Believers",
+        "Verses": "118",
+        "Rukus": "6",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "24",
+        "Name": "An-Nur",
+        "Meaning in English": "The Light",
+        "Verses": "64",
+        "Rukus": "9",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "25",
+        "Name": "Al-Furqan",
+        "Meaning in English": "The Criterion, The Standard, The Standard of True and False",
+        "Verses": "77",
+        "Rukus": "6",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "26",
+        "Name": "ash-Shu`ara'",
+        "Meaning in English": "The Poets",
+        "Verses": "227",
+        "Rukus": "11",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "27",
+        "Name": "An-Naml",
+        "Meaning in English": "The Ant, The Ants",
+        "Verses": "93",
+        "Rukus": "7",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "28",
+        "Name": "Al-Qasas",
+        "Meaning in English": "The Narrations, The Stories, The Story",
+        "Verses": "88",
+        "Rukus": "9",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "29",
+        "Name": "Al-`Ankabut",
+        "Meaning in English": "The Spider",
+        "Verses": "69",
+        "Rukus": "7",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "30",
+        "Name": "Ar-Rum",
+        "Meaning in English": "The Romans, The Byzantines",
+        "Verses": "60",
+        "Rukus": "6",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "31",
+        "Name": "Luqman",
+        "Meaning in English": "Luqman",
+        "Verses": "34",
+        "Rukus": "4",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "32",
+        "Name": "As-Sajdah",
+        "Meaning in English": "The Prostration, Worship, Adoration",
+        "Verses": "30",
+        "Rukus": "3",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "33",
+        "Name": "Al-Ahzab",
+        "Meaning in English": "The Clans, The Confederates, The Combined Forces",
+        "Verses": "73",
+        "Rukus": "9",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "34",
+        "Name": "Saba'",
+        "Meaning in English": "Sheba",
+        "Verses": "54",
+        "Rukus": "6",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "35",
+        "Name": "Fatir",
+        "Meaning in English": "The Originator",
+        "Verses": "45",
+        "Rukus": "5",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "36",
+        "Name": "Ya seen",
+        "Meaning in English": "Ya Seen",
+        "Verses": "83",
+        "Rukus": "5",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "37",
+        "Name": "As-Saffat",
+        "Meaning in English": "Those Who Set The Ranks, Drawn Up In Ranks, Those Ranged in Ranks",
+        "Verses": "182",
+        "Rukus": "5",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "38",
+        "Name": "Sad",
+        "Meaning in English": "Sad",
+        "Verses": "88",
+        "Rukus": "5",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "39",
+        "Name": "Az-Zumar",
+        "Meaning in English": "The Crowds, The Troops, Throngs",
+        "Verses": "75",
+        "Rukus": "8",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "40",
+        "Name": "Ghafir",
+        "Meaning in English": "The Forgiver (God), Forgiving",
+        "Verses": "85",
+        "Rukus": "9",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "41",
+        "Name": "Fussilat",
+        "Meaning in English": "Expounded, Explained In Detail, Clearly Spelled Out",
+        "Verses": "54",
+        "Rukus": "6",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "42",
+        "Name": "Ash-Shura",
+        "Meaning in English": "The Consultation",
+        "Verses": "53",
+        "Rukus": "5",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "43",
+        "Name": "Az-Zukhruf",
+        "Meaning in English": "The Gold Adornments, The Ornaments of Gold, Luxury, Gold",
+        "Verses": "89",
+        "Rukus": "7",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "44",
+        "Name": "Ad-Dukhan",
+        "Meaning in English": "The Smoke",
+        "Verses": "59",
+        "Rukus": "3",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "45",
+        "Name": "Al-Jathiyah",
+        "Meaning in English": "The Kneeling Down, Crouching",
+        "Verses": "37",
+        "Rukus": "4",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "46",
+        "Name": "Al-Ahqaf",
+        "Meaning in English": "Winding Sand-tracts, The Dunes, The Sand-Dunes",
+        "Verses": "35",
+        "Rukus": "4",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "47",
+        "Name": "Muhammad",
+        "Meaning in English": "Muhammad Sallalahu 'Alaihi Wa Salam",
+        "Verses": "38",
+        "Rukus": "4",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "48",
+        "Name": "Al-Fath",
+        "Meaning in English": "The Victory, Conquest",
+        "Verses": "29",
+        "Rukus": "4",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "49",
+        "Name": "Al-Hujurat",
+        "Meaning in English": "The Private Apartments, The Inner Apartments",
+        "Verses": "18",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "50",
+        "Name": "Qaf",
+        "Meaning in English": "Qaf",
+        "Verses": "45",
+        "Rukus": "3",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "51",
+        "Name": "Ad-Dhariyat",
+        "Meaning in English": "The Wind That Scatter, The Winnowing Winds, The Dust-Scattering Winds",
+        "Verses": "60",
+        "Rukus": "3",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "52",
+        "Name": "At-Tur",
+        "Meaning in English": "The Mount, Mount Sinai",
+        "Verses": "49",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "53",
+        "Name": "An-Najm",
+        "Meaning in English": "The Star, The Unfolding",
+        "Verses": "62",
+        "Rukus": "3",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "54",
+        "Name": "Al-Qamar",
+        "Meaning in English": "The Moon",
+        "Verses": "55",
+        "Rukus": "3",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "55",
+        "Name": "Ar-Rahman",
+        "Meaning in English": "The Most Merciful, The Most Gracious",
+        "Verses": "78",
+        "Rukus": "3",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "56",
+        "Name": "Al-Waqi'ah",
+        "Meaning in English": "The Inevitable, The Event, That Which Must Come to Pass",
+        "Verses": "96",
+        "Rukus": "3",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "57",
+        "Name": "Al-Hadeed",
+        "Meaning in English": "The Iron",
+        "Verses": "29",
+        "Rukus": "4",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "58",
+        "Name": "Al-Mujadilah",
+        "Meaning in English": "The Pleading, The Pleading Woman",
+        "Verses": "22",
+        "Rukus": "3",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "59",
+        "Name": "Al-Hashr",
+        "Meaning in English": "The Mustering, The Gathering, Exile, Banishment",
+        "Verses": "24",
+        "Rukus": "3",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "60",
+        "Name": "Al-Mumtahanah",
+        "Meaning in English": "The Examined One, She That Is To Be Examined",
+        "Verses": "13",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "61",
+        "Name": "As-Saff",
+        "Meaning in English": "The Ranks, Battle Array",
+        "Verses": "14",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "62",
+        "Name": "Al-Jumu'ah",
+        "Meaning in English": "The Congregation, Friday",
+        "Verses": "11",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "63",
+        "Name": "Al-Munafiqun",
+        "Meaning in English": "The Hypocrites",
+        "Verses": "11",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "64",
+        "Name": "At-Taghabun",
+        "Meaning in English": "The Cheating, The Mutual Disillusion, The Mutual Loss and Gain, Loss and Gain",
+        "Verses": "18",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "65",
+        "Name": "At-Talaq",
+        "Meaning in English": "Divorce",
+        "Verses": "12",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "66",
+        "Name": "At-Tahreem",
+        "Meaning in English": "The Prohibition",
+        "Verses": "12",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "67",
+        "Name": "Al-Mulk",
+        "Meaning in English": "The Dominion, Sovereignty, Control",
+        "Verses": "30",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "68",
+        "Name": "Al-Qalam",
+        "Meaning in English": "The Pen",
+        "Verses": "52",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "69",
+        "Name": "Al-Haqqah",
+        "Meaning in English": "The Sure Reality, The Laying-Bare of the Truth",
+        "Verses": "52",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "70",
+        "Name": "Al-Ma'aarij",
+        "Meaning in English": "The Ways of Ascent, The Ascending Stairways",
+        "Verses": "44",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "71",
+        "Name": "Nuh",
+        "Meaning in English": "Noah",
+        "Verses": "28",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "72",
+        "Name": "Al-Jinn",
+        "Meaning in English": "The Spirits, The Unseen Beings",
+        "Verses": "28",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "73",
+        "Name": "Al-Muzzammil",
+        "Meaning in English": "The Enfolded One, The Enshrouded One, Bundled Up, The Enwrapped One",
+        "Verses": "20",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "74",
+        "Name": "Al-Muddathir",
+        "Meaning in English": "The One Wrapped Up, The Cloaked One, The Man Wearing A Cloak, The Enfolded One",
+        "Verses": "56",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "75",
+        "Name": "Al-Qiyamah",
+        "Meaning in English": "Resurrection, The Day of Resurrection, Rising Of The Dead",
+        "Verses": "40",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "76",
+        "Name": "Al-Insan",
+        "Meaning in English": "The Human, Man",
+        "Verses": "31",
+        "Rukus": "2",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "77",
+        "Name": "Al-Mursalat",
+        "Meaning in English": "Those Sent Forth, The Emissaries, Winds Sent Forth",
+        "Verses": "50",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "78",
+        "Name": "An-Naba'",
+        "Meaning in English": "The Great News, The Announcement, The Tiding",
+        "Verses": "40",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "79",
+        "Name": "An-Nazi'at",
+        "Meaning in English": "Those Who Tear Out, Those Who Drag Forth, Soul-snatchers, Those That Rise",
+        "Verses": "46",
+        "Rukus": "2",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "80",
+        "Name": "`Abasa",
+        "Meaning in English": "He Frowned",
+        "Verses": "42",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "81",
+        "Name": "At-Takweer",
+        "Meaning in English": "The Folding Up, The Overthrowing, Shrouding in Darkness",
+        "Verses": "29",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "82",
+        "Name": "Al-Infitar",
+        "Meaning in English": "The Cleaving Asunder, Bursting Apart",
+        "Verses": "19",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "83",
+        "Name": "Al-Mutaffifeen",
+        "Meaning in English": "The Dealers in Fraud, Defrauding, The Cheats, Those Who Give Short Measure",
+        "Verses": "36",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "84",
+        "Name": "Al-Inshiqaq",
+        "Meaning in English": "The Rending Asunder, The Sundering, Splitting Open, The Splitting Asunder",
+        "Verses": "25",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "85",
+        "Name": "Al-Burooj",
+        "Meaning in English": "The Mansions Of The Stars, Constellations, The Great Constellations",
+        "Verses": "22",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "86",
+        "Name": "At-Tariq",
+        "Meaning in English": "The Night-Visitant, The Morning Star, The Nightcomer, That Which Comes in the Night",
+        "Verses": "17",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "87",
+        "Name": "Al-A'la",
+        "Meaning in English": "The Most High, The All-Highest, Glory To Your Lord In The Highest",
+        "Verses": "19",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "88",
+        "Name": "Al-Ghashiyah",
+        "Meaning in English": "The Overwhelming Event, The Overshadowing Event, The Pall",
+        "Verses": "26",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "89",
+        "Name": "Al-Fajr",
+        "Meaning in English": "The Break of Day, The Daybreak, The Dawn",
+        "Verses": "30",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "90",
+        "Name": "Al-Balad",
+        "Meaning in English": "The City, The Land",
+        "Verses": "20",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "91",
+        "Name": "Ash-Shams",
+        "Meaning in English": "The Sun",
+        "Verses": "15",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "92",
+        "Name": "Al-Lail",
+        "Meaning in English": "The Night",
+        "Verses": "21",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "93",
+        "Name": "Ad-Dhuha",
+        "Meaning in English": "The Glorious Morning Light, The Forenoon, Morning Hours, Morning Bright, The Bright Morning Hours",
+        "Verses": "11",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "94",
+        "Name": "Al-Inshirah",
+        "Meaning in English": "The Expansion of Breast, Solace, Consolation, Relief, Patient, The Opening-Up of the Heart",
+        "Verses": "8",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "95",
+        "Name": "Al-Teen",
+        "Meaning in English": "The Fig Tree, The Fig",
+        "Verses": "8",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "96",
+        "Name": "al-`Alaq",
+        "Meaning in English": "The Clinging Clot, Clot of Blood, The Germ-Cell",
+        "Verses": "19",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "97",
+        "Name": "Al-Qadr",
+        "Meaning in English": "The Night of Honor, The Night of Decree, Power, Fate, Destiny",
+        "Verses": "5",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "98",
+        "Name": "Al-Bayyinah",
+        "Meaning in English": "The Clear Evidence, The Evidence of the Truth",
+        "Verses": "8",
+        "Rukus": "1",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "99",
+        "Name": "Az-Zalzala",
+        "Meaning in English": "The Earthquake",
+        "Verses": "8",
+        "Rukus": "1",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "100",
+        "Name": "Al-Adiyat",
+        "Meaning in English": "The Courser, The Chargers, The War Horse",
+        "Verses": "11",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "101",
+        "Name": "al-Qari`ah",
+        "Meaning in English": "The Striking Hour, The Great Calamity, The Stunning Blow, The Sudden Calamity",
+        "Verses": "11",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "102",
+        "Name": "At-Takathur",
+        "Meaning in English": "The Piling Up, Rivalry in World Increase, Competition, Greed for More and More",
+        "Verses": "8",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "103",
+        "Name": "Al-Asr",
+        "Meaning in English": "The Time, The Declining Day, The Epoch, The Flight of Time",
+        "Verses": "3",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "104",
+        "Name": "Al-Humazah",
+        "Meaning in English": "The Scandalmonger, The Traducer, The Gossipmonger, The Slanderer",
+        "Verses": "9",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "105",
+        "Name": "Al-Feel",
+        "Meaning in English": "The Elephant",
+        "Verses": "5",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "106",
+        "Name": "Al-Quraish",
+        "Meaning in English": "Quraysh",
+        "Verses": "4",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "107",
+        "Name": "Al-Maa'oun",
+        "Meaning in English": "The Neighbourly Assistance, Small Kindnesses, Almsgiving, Assistance",
+        "Verses": "7",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "108",
+        "Name": "Al-Kawthar",
+        "Meaning in English": "Abundance, Plenty, Good in Abundance",
+        "Verses": "3",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "109",
+        "Name": "Al-Kafiroun",
+        "Meaning in English": "The Disbelievers, The Kafirs, Those Who Deny the Truth",
+        "Verses": "6",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "110",
+        "Name": "An-Nasr",
+        "Meaning in English": "The Help, Divine Support, Victory, Succour",
+        "Verses": "3",
+        "Rukus": "1",
+        "Maccan / Medinan": "Medinan"
+    },
+    {
+        "No.": "111",
+        "Name": "Al-Masad",
+        "Meaning in English": "The Plaited Rope, The Palm Fibre, The Twisted Strands",
+        "Verses": "5",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "112",
+        "Name": "Al-Ikhlas",
+        "Meaning in English": "Purity of Faith, The Fidelity, The Declaration of [God's] Perfection",
+        "Verses": "4",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "113",
+        "Name": "Al-Falaq",
+        "Meaning in English": "The Daybreak, Dawn, The Rising Dawn",
+        "Verses": "5",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    },
+    {
+        "No.": "114",
+        "Name": "Al-Nas",
+        "Meaning in English": "Mankind, Men",
+        "Verses": "6",
+        "Rukus": "1",
+        "Maccan / Medinan": "Maccan"
+    }
+];
+
 List arabicName = [
 	{"surah":"1", "name": "الفاتحة"},
 	{"surah":"2", "name": "البقرة"},

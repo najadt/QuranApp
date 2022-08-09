@@ -116,10 +116,11 @@ class _IndexPageState extends State<IndexPage> {
                     numberSystem
                         ? ArabicSuraNumbers(i: i)
                         : Text(
-                            "${i + 1}.",
+                            "${i + 1}",
                             style: const TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.black,
+                              //fontWeight: FontWeight.bold
+                            ),
                           ),
                     const SizedBox(
                       width: 5,
@@ -131,30 +132,54 @@ class _IndexPageState extends State<IndexPage> {
                         children: [
                           Text(
                             suraNamesMalayalam[i],
-                            style: const TextStyle(color: Colors.black),
+                            style: const TextStyle(
+                                color: Colors.black, fontSize: 15),
                           ),
-
-                          // Text(quran[0][hi]['sura_name_en'],
-                          //     style: TextStyle(
-                          //         fontSize: 10, color: Colors.black45)),
+                          Row(
+                            children: [
+                              Text(englishName[i]['Name'],
+                                  style: const TextStyle(
+                                      fontSize: 10, color: Colors.black45)),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              englishName[i]['Maccan / Medinan'] == 'Maccan'
+                                  ? Image.asset(
+                                      'assets/makka.png',
+                                      width: 10,
+                                    )
+                                  : Image.asset(
+                                      'assets/madeena.png',
+                                      width: 12,
+                                    ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
                     const Expanded(child: SizedBox()),
-                    Text(
-                      arabicName[i]['name'],
-                      style: const TextStyle(
-                          fontSize: 30,
-                          color: Colors.black87,
-                          fontFamily: 'quran',
-                          shadows: [
-                            Shadow(
-                              offset: Offset(.5, .5),
-                              blurRadius: 1.0,
-                              color: Color.fromARGB(255, 130, 130, 130),
-                            )
-                          ]),
-                      textDirection: TextDirection.rtl,
+                    Row(
+                      children: [
+                        Text(
+                          arabicName[i]['name'],
+                          style: const TextStyle(
+                              fontSize: 30,
+                              color: Colors.black87,
+                              fontFamily: 'quran',
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(.5, .5),
+                                  blurRadius: 1.0,
+                                  color: Color.fromARGB(255, 130, 130, 130),
+                                )
+                              ]),
+                          textDirection: TextDirection.rtl,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        ArabicSuraNumbers(i: i)
+                      ],
                     ),
                   ],
                 ),
@@ -195,7 +220,7 @@ class ArabicSuraNumbers extends StatelessWidget {
       style: const TextStyle(
           color: Color.fromARGB(255, 0, 0, 0),
           fontFamily: 'me_quran',
-          fontSize: 20,
+          fontSize: 18,
           shadows: [
             Shadow(
               offset: Offset(.5, .5),

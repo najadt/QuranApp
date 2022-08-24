@@ -38,7 +38,7 @@ dependencies:
   shared_preferences: ^2.0.13
   share_plus: ^4.0.3
   http: ^0.13.4
-  new_version: ^0.3.0
+  #new_version: ^0.3.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +72,8 @@ flutter:
     - quran.png
     - makka.png
     - madeena.png
+    - hafsData_v18.json
+    - UthmanicHafs1Ver18.ttf
 
   #   - images/a_dot_ham.jpeg
 
@@ -90,6 +92,9 @@ flutter:
     - family: quran
       fonts:
         - asset: assets/HafsSmart_08.ttf
+    - family: quran_font2
+      fonts:
+        - asset: assets/UthmanicHafs1Ver18.ttf
     - family: me_quran
       fonts:
         - asset: assets/me_quran.ttf

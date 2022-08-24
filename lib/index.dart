@@ -52,7 +52,7 @@ class _IndexPageState extends State<IndexPage> {
                           sura: bookmarkedSura - 1,
                           suraName: arabicName[bookmarkedSura - 1]['name'],
                           ayah: bookmarkedAyah,
-                          malayalam: quran[1],
+                          malayalam: quran[1], arabicTextForShareing: quran[2],
                         )));
           }
         },
@@ -162,11 +162,11 @@ class _IndexPageState extends State<IndexPage> {
                       children: [
                         Text(
                           arabicName[i]['name'],
-                          style: const TextStyle(
+                          style:  TextStyle(
                               fontSize: 30,
                               color: Colors.black87,
-                              fontFamily: 'quran',
-                              shadows: [
+                              fontFamily: arabicFont,
+                              shadows: const[
                                 Shadow(
                                   offset: Offset(.5, .5),
                                   blurRadius: 1.0,
@@ -189,6 +189,7 @@ class _IndexPageState extends State<IndexPage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => SuraBuilder(
+                          arabicTextForShareing: quran[2],
                               arabic: quran[0],
                               sura: i,
                               suraName: arabicName[i]['name'],

@@ -19,6 +19,7 @@ class SuraBuilder extends StatefulWidget {
   final arabic;
   final suraName;
   final malayalam;
+  final arabicTextForShareing;
   int ayah;
 
   SuraBuilder(
@@ -27,7 +28,8 @@ class SuraBuilder extends StatefulWidget {
       this.arabic,
       this.suraName,
       this.malayalam,
-      required this.ayah})
+      this.arabicTextForShareing,
+      required this.ayah, })
       : super(key: key);
 
   @override
@@ -194,9 +196,8 @@ class _SuraBuilderState extends State<SuraBuilder> {
                                   ),
                                   PopupMenuItem(
                                     onTap: () {
-                                      Share.share(widget.arabic[
-                                                  index + previousVerses]
-                                              ['aya_text_emlaey'] +
+                                      Share.share(widget.arabicTextForShareing[index +
+                                              previousVerses]['aya_text'] +
                                           '\n\n' +
                                           widget.malayalam[
                                               index + previousVerses]['text'] +

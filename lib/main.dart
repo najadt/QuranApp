@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+//import 'package:new_version_plus/new_version_plus.dart';
 import 'constants_variables.dart';
 import 'index.dart';
-import 'package:new_version/new_version.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,15 +37,15 @@ class _MyAppState extends State<MyApp> {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await readJson();
       await getSettings();
-      final newVersion = NewVersion();
-      newVersion.showAlertIfNecessary(context: context);
+      //final newVersion = NewVersionPlus();
+      //newVersion.showAlertIfNecessary(context: context);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Quran',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),

@@ -1,7 +1,7 @@
 import 'package:quran/constants_variables.dart';
 import 'package:flutter/material.dart';
+import 'package:quran/support_dev.dart';
 import 'about.dart';
-import 'constants_variables.dart';
 import 'other_apps.dart';
 import 'package:share_plus/share_plus.dart';
 import 'settings.dart';
@@ -33,8 +33,11 @@ class MyDrawer extends StatelessWidget {
                   'assets/quran.png',
                   height: 80,
                 ),
-               const Text('Al Quran',style: TextStyle(fontSize: 20),),
-               const Text('മലയാളം അർത്ഥസഹിതം')
+                const Text(
+                  'Al Quran',
+                  style: TextStyle(fontSize: 20),
+                ),
+                const Text('മലയാളം അർത്ഥസഹിതം')
               ],
             ),
           ),
@@ -94,9 +97,22 @@ Download from https://play.google.com/store/apps/details?id=org.ahlussunnabooks.
               'Rate',
             ),
             onTap: () async {
-              if (!await launch(quranAppurl)) {
+              if (!await launchUrl(quranAppurl,
+                  mode: LaunchMode.externalApplication)) {
                 throw 'Could not launch $quranAppurl';
               }
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.monetization_on),
+            title: const Text('Support Developer'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DonationPage(),
+                  ));
             },
           ),
           ListTile(

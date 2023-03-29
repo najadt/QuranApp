@@ -65,7 +65,8 @@ flutter:
   assets:
     - hafs_smart_v8.json
     - me_quran.ttf
-    - HafsSmart_08.ttf
+    - uthmanic_hafs_v20.ttf
+    #- HafsSmart_08.ttf
     - ML-TTKarthikaNormal.ttf
     - ahlussunna_voice_logo.jpg
     - awraad.png
@@ -90,7 +91,7 @@ flutter:
   fonts:
     - family: quran
       fonts:
-        - asset: assets/HafsSmart_08.ttf
+        - asset: assets/uthmanic_hafs_v20.ttf
     - family: me_quran
       fonts:
         - asset: assets/me_quran.ttf

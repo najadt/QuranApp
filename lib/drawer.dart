@@ -131,6 +131,20 @@ Download from https://play.google.com/store/apps/details?id=org.ahlussunnabooks.
                   ));
             },
           ),
+          ListTile(
+            leading: const Icon(
+              Icons.chat,
+            ),
+            title: const Text(
+              'Report Error',
+            ),
+            onTap: () async {
+              if (!await launchUrl(whatsAppUrl,
+                  mode: LaunchMode.externalApplication)) {
+                throw 'Could not launch $whatsAppUrl';
+              }
+            },
+          ),
         ],
       ),
     );

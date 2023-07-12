@@ -45,7 +45,7 @@ class _SettingsState extends State<Settings> {
                         });
                       }),
                   Text(
-                    "‏ ‏‏ ‏‏‏‏ ‏‏‏‏‏‏ ‏",
+                    "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﰀ",
                     style: TextStyle(
                         fontFamily: 'quran', fontSize: arabicFontSize),
                     textDirection: TextDirection.rtl,
@@ -97,7 +97,7 @@ class _SettingsState extends State<Settings> {
                         });
                       }),
                   Text(
-                    "‏ ‏‏ ‏‏‏‏ ‏‏‏‏‏‏ ‏",
+                    "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﰀ",
                     style: TextStyle(
                         fontFamily: 'quran', fontSize: mushafFontSize),
                     textDirection: TextDirection.rtl,
@@ -137,7 +137,7 @@ class _SettingsState extends State<Settings> {
                   //   ),
                   //   title: const Text('English'),
                   // ),
-                
+
                   const SizedBox(
                     height: 20,
                   ),

@@ -50,23 +50,23 @@ class DonationPage extends StatelessWidget {
                   const Text('UPI Payment (only in India)',
                       style: TextStyle(fontWeight: FontWeight.bold)),
                   const Divider(),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text('UPI ID: najad@sbi'),
+                    children: [
+                      Text('UPI ID: 9633645334@sbi'),
                       SizedBox(
                         height: 20,
                         child: CopyToClipBoardElevatedButton(
-                            copytext: 'najad@sbi'),
+                            copytext: '9633645334@sbi'),
                       )
                     ],
                   ),
                   const SizedBox(
                     height: 15,
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text('GooglePay/PhonePay: 9633645334'),
                       SizedBox(
                         height: 20,

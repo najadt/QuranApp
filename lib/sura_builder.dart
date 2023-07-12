@@ -178,8 +178,8 @@ class _SuraBuilderState extends State<SuraBuilder> {
                                     onTap: () {
                                       savebookmark(widget.sura + 1, index);
                                     },
-                                    child: Row(
-                                      children: const [
+                                    child: const Row(
+                                      children: [
                                         Icon(
                                           Icons.bookmark_add,
                                           color:
@@ -203,9 +203,9 @@ class _SuraBuilderState extends State<SuraBuilder> {
                                           '\n\n' +
                                           ('(Quran ${widget.sura + 1}:${index + 1})'));
                                     },
-                                    child: Row(
+                                    child: const Row(
                                       //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                      children: const [
+                                      children: [
                                         Icon(
                                           Icons.share,
                                           color:
@@ -327,8 +327,8 @@ class ReturnBasmala extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      const Center(
+    return const Stack(children: [
+      Center(
         child: Text(
           'بسم الله الرحمن الرحيم',
           style: TextStyle(fontFamily: 'me_quran', fontSize: 30),

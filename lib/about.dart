@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quran/constants_variables.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -20,19 +22,39 @@ class AboutPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-               const Text('''Quran text taken from \n 
+                const Text('''Quran text taken from \n 
 King Fahd Glorious Qur'an Printing Complex.
 Website:  https://qurancomplex.gov.sa \n
 File source: https://qurancomplex.gov.sa/en/techquran/dev/ \n
-File: "Ottoman drawing line (Hafs narration) for smart devices"\n
-Font: Unicode Uthmanic Font (Hafs Narration) for smart devices.'''),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Divider(),
-                    ),
-                    const Text('''Malayalam translation: Cheriyamundam Abdul Hameed & Kunji Mohammed Parappore.\n
+File: "Unicode Uthmanic Font (Hafs Narration)"'''),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Divider(),
+                ),
+                const Text(
+                    '''Malayalam translation: Cheriyamundam Abdul Hameed & Kunji Mohammed Parappore.\n
 Source: Fawaz Ahmed - https://github.com/fawazahmed0\n
-File: https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/mal-abdulhameedmada.json''')
+File: https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/mal-abdulhameedmada.json'''),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Divider(),
+                ),
+                TextButton.icon(
+                  icon: Image.asset(
+                    'assets/WhatsApp-PNG-Picture.png',
+                    height: 50,
+                  ),
+                  onPressed: () async {
+                    if (!await launchUrl(whatsAppUrl,
+                        mode: LaunchMode.externalApplication)) {
+                      throw 'Could not launch $whatsAppUrl';
+                    }
+                  },
+                  label: const Text(
+                    'Click to report any mistake. ',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
               ],
             ),
           ),

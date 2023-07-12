@@ -29,6 +29,8 @@ Uri Awraadurl = Uri.parse(
     'https://play.google.com/store/apps/details?id=org.ahlussunnabooks.awraad');
 Uri quranAppurl = Uri.parse(
     'https://play.google.com/store/apps/details?id=org.ahlussunnabooks.quran');
+    Uri whatsAppUrl = Uri.parse(
+    'https://api.whatsapp.com/send?phone=919633645334&text=*Send%20from%20Quran%20App*%0A');
 
 Uri duaFromQuranurl = Uri.parse(
     'https://play.google.com/store/apps/details?id=dev.najad.duasinquran');

@@ -6,10 +6,6 @@ import 'other_apps.dart';
 import 'package:share_plus/share_plus.dart';
 import 'settings.dart';
 import 'package:url_launcher/url_launcher.dart';
-//import 'package:url_launcher/url_launcher.dart';
-//import 'about.dart';
-//import 'share_content.dart';
-//mport 'constants_variables.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({
@@ -150,12 +146,3 @@ Download from https://play.google.com/store/apps/details?id=org.ahlussunnabooks.
     );
   }
 }
-
-// void launchURL() async {
-//   if (!await launch(url)) throw 'Could not launch $url';
-// }
-
-// void openStoreListing() async {
-//   if (!await launch(storeUrl)) throw 'Could not launch $storeUrl';
-// }
-

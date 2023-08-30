@@ -1,8 +1,9 @@
-// ignore_for_file: non_constant_identifier_names, prefer_typing_uninitialized_variab, must_be_immutable, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables
+// ignore_for_file: non_constant_identifier_names, prefer_typing_uninitialized_variab, must_be_immutable, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings
 
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:quran/return_arabic_number_with_style.dart';
 import 'package:share_plus/share_plus.dart';
 import 'sura_names.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -15,22 +16,22 @@ final ItemPositionsListener itemPositionsListener =
     ItemPositionsListener.create();
 
 class SuraBuilder extends StatefulWidget {
-  final sura;
+  final int sura;
   final arabic;
   final suraName;
   final malayalam;
-  final arabicTextForShareing;
+  // final arabicTextForShareing;
   int ayah;
 
-  SuraBuilder(
-      {Key? key,
-      this.sura,
-      this.arabic,
-      this.suraName,
-      this.malayalam,
-      this.arabicTextForShareing,
-      required this.ayah, })
-      : super(key: key);
+  SuraBuilder({
+    Key? key,
+    required this.sura,
+    this.arabic,
+    this.suraName,
+    this.malayalam,
+    // this.arabicTextForShareing,
+    required this.ayah,
+  }) : super(key: key);
 
   @override
   State<SuraBuilder> createState() => _SuraBuilderState();
@@ -98,22 +99,37 @@ class _SuraBuilderState extends State<SuraBuilder> {
             ),
           ),
           centerTitle: true,
-          title: Text(
-            // widget.
-            widget.suraName,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ArabicSuraNumbers(
+                i: widget.sura,
                 color: Colors.white,
-                fontFamily: 'quran',
-                shadows: [
-                  Shadow(
-                    offset: Offset(1, 1),
-                    blurRadius: 2.0,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                  ),
-                ]),
+                size: 21,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(
+                widget.suraName,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: 'quran',
+                    shadows: [
+                      Shadow(
+                        offset: Offset(1, 1),
+                        blurRadius: 2.0,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ]),
+              ),
+              const SizedBox(
+                width: 25,
+              ),
+            ],
           ),
           backgroundColor: const Color.fromARGB(255, 56, 115, 59),
           //actions: [
@@ -196,8 +212,11 @@ class _SuraBuilderState extends State<SuraBuilder> {
                                   ),
                                   PopupMenuItem(
                                     onTap: () {
-                                      Share.share(widget.arabicTextForShareing[index +
-                                              previousVerses]['aya_text'] +
+                                      String arabic =
+                                          widget.arabic[index + previousVerses]
+                                              ['aya_text'];
+                                      Share.share(arabic.substring(
+                                              0, arabic.length - 1) +
                                           '\n\n' +
                                           widget.malayalam[
                                               index + previousVerses]['text'] +

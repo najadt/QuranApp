@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 //import 'package:new_version_plus/new_version_plus.dart';
 import 'constants_variables.dart';
 import 'index.dart';
-//import 'package:new_version/new_version.dart';
+import 'package:new_version_plus/new_version_plus.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,14 +20,14 @@ Future readJson() async {
       await rootBundle.loadString('assets/hafs_smart_v8.json');
   final data = await json.decode(response);
 
-  final String response2 =
-      await rootBundle.loadString('assets/hafsData_v18.json');
-  final dataForSharing = await json.decode(response2);
+  // final String response2 =
+  //     await rootBundle.loadString('assets/hafsData_v18.json');
+  // final dataForSharing = await json.decode(response2);
 
-  quranTextForSharing = dataForSharing['quran'];
+  // quranTextForSharing = dataForSharing['quran'];
   arabic = data['quran'];
   malayalam = data['malayalam'];
-  return quran = [arabic, malayalam, quranTextForSharing];
+  return quran = [arabic, malayalam];
 }
 
 class MyApp extends StatefulWidget {
@@ -44,16 +44,15 @@ class _MyAppState extends State<MyApp> {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await readJson();
       await getSettings();
-      //final newVersion = NewVersion();
-      //newVersion.showAlertIfNecessary(context: context);
     });
+    final newVersionPlus = NewVersionPlus();
+    newVersionPlus.showAlertIfNecessary(context: context);
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Quran',
-     
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),

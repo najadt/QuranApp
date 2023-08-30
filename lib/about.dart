@@ -41,7 +41,7 @@ File: https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/mal-abdulhame
                 ),
                 TextButton.icon(
                   icon: Image.asset(
-                    'assets/WhatsApp-PNG-Picture.png',
+                    'assets/WhatsApp.png',
                     height: 50,
                   ),
                   onPressed: () async {

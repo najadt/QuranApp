@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran/return_arabic_number_with_style.dart';
 import 'constants_variables.dart';
 import 'sura_builder.dart';
 import 'main.dart';
@@ -52,7 +53,8 @@ class _IndexPageState extends State<IndexPage> {
                           sura: bookmarkedSura - 1,
                           suraName: arabicName[bookmarkedSura - 1]['name'],
                           ayah: bookmarkedAyah,
-                          malayalam: quran[1], arabicTextForShareing: quran[2],
+                          malayalam: quran[1],
+                          // arabicTextForShareing: quran[2],
                         )));
           }
         },
@@ -162,11 +164,11 @@ class _IndexPageState extends State<IndexPage> {
                       children: [
                         Text(
                           arabicName[i]['name'],
-                          style:  TextStyle(
+                          style: TextStyle(
                               fontSize: 30,
                               color: Colors.black87,
                               fontFamily: arabicFont,
-                              shadows: const[
+                              shadows: const [
                                 Shadow(
                                   offset: Offset(.5, .5),
                                   blurRadius: 1.0,
@@ -189,7 +191,7 @@ class _IndexPageState extends State<IndexPage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => SuraBuilder(
-                          arabicTextForShareing: quran[2],
+                              // arabicTextForShareing: quran[0],
                               arabic: quran[0],
                               sura: i,
                               suraName: arabicName[i]['name'],
@@ -206,29 +208,4 @@ class _IndexPageState extends State<IndexPage> {
   }
 }
 
-class ArabicSuraNumbers extends StatelessWidget {
-  const ArabicSuraNumbers({
-    Key? key,
-    required this.i,
-  }) : super(key: key);
 
-  final int i;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      '\uFD3E' + (i + 1).toString().toArabicNumbers + '\uFD3F',
-      style: const TextStyle(
-          color: Color.fromARGB(255, 0, 0, 0),
-          fontFamily: 'me_quran',
-          fontSize: 18,
-          shadows: [
-            Shadow(
-              offset: Offset(.5, .5),
-              blurRadius: 1.0,
-              color: Colors.amberAccent,
-            ),
-          ]),
-    );
-  }
-}

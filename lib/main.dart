@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Quran',
-      title: 'Quran',
+     
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),

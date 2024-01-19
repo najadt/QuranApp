@@ -50,9 +50,11 @@ File: https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/mal-abdulhame
                       throw 'Could not launch $whatsAppUrl';
                     }
                   },
-                  label: const Text(
+                  label: Text(
                     'Click to report any mistake. ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onBackground),
                   ),
                 ),
               ],

@@ -1,4 +1,7 @@
+import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:quran/controller/settings_controller.dart';
 import 'constants_variables.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -10,165 +13,204 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
+  SettingsController controller = Get.put(SettingsController());
+
   @override
   Widget build(BuildContext context) {
-    return Material(
-      //theme: ThemeData(primarySwatch: Colors.green
-      //),
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            "Settings",
-          ),
-          backgroundColor: const Color.fromARGB(255, 56, 115, 59),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Settings",
         ),
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  const Text(
-                    'Arabic Font Size:',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const Text(
+                  'Arabic Font Size:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
                   ),
-                  Slider(
-                      value: arabicFontSize,
-                      min: 20,
-                      max: 40,
-                      onChanged: (value) {
-                        setState(() {
-                          arabicFontSize = value;
-                        });
-                      }),
-                  Text(
-                    "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﰀ",
-                    style: TextStyle(
-                        fontFamily: 'quran', fontSize: arabicFontSize),
-                    textDirection: TextDirection.rtl,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﰀ",
+                  style:
+                      TextStyle(fontFamily: 'quran', fontSize: arabicFontSize),
+                  textDirection: TextDirection.rtl,
+                ),
+                Slider(
+                    activeColor: Colors.green,
+                    inactiveColor: Colors.green.shade200,
+                    value: arabicFontSize,
+                    min: 20,
+                    max: 40,
+                    onChanged: (value) {
+                      setState(() {
+                        arabicFontSize = value;
+                      });
+                    }),
+                const Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Divider(),
+                ),
+                const Text(
+                  'Malayalam Font Size:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
-                    child: Divider(),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'പരമകാരുണികനും കരുണാനിധിയുമായ അല്ലാഹുവിന്റെ നാമത്തില്‍',
+                  style: TextStyle(
+                      fontFamily: 'malayalam', fontSize: malayalamFontSize),
+                  //textDirection: TextDirection.rtl,
+                ),
+                Slider(
+                    activeColor: Colors.green,
+                    inactiveColor: Colors.green.shade200,
+                    value: malayalamFontSize,
+                    min: 10,
+                    max: 25,
+                    onChanged: (value) {
+                      setState(() {
+                        malayalamFontSize = value;
+                      });
+                    }),
+                const Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Divider(),
+                ),
+                const Text(
+                  'Mushaf Mode Font Size:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
                   ),
-                  const Text(
-                    'Malayalam Font Size:',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
-                  ),
-                  Slider(
-                      value: malayalamFontSize,
-                      min: 10,
-                      max: 25,
-                      onChanged: (value) {
-                        setState(() {
-                          malayalamFontSize = value;
-                        });
-                      }),
-                  Text(
-                    'പരമകാരുണികനും കരുണാനിധിയുമായ അല്ലാഹുവിന്റെ നാമത്തില്‍',
-                    style: TextStyle(
-                        fontFamily: 'malayalam', fontSize: malayalamFontSize),
-                    //textDirection: TextDirection.rtl,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
-                    child: Divider(),
-                  ),
-                  const Text(
-                    'Mushaf Mode Font Size:',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
-                  ),
-                  Slider(
-                      value: mushafFontSize,
-                      min: 20,
-                      max: 50,
-                      onChanged: (value) {
-                        setState(() {
-                          mushafFontSize = value;
-                        });
-                      }),
-                  Text(
-                    "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﰀ",
-                    style: TextStyle(
-                        fontFamily: 'quran', fontSize: mushafFontSize),
-                    textDirection: TextDirection.rtl,
-                  ),
-                  // const Padding(
-                  //   padding: EdgeInsets.only(top: 10, bottom: 10),
-                  //   child: Divider(),
-                  // ),
-                  // const Text(
-                  //   'Index Numbering System:',
-                  //   style: TextStyle(
-                  //     fontWeight: FontWeight.bold,
-                  //     fontSize: 15,
-                  //   ),
-                  // ),
-                  // ListTile(
-                  //   leading: Radio<bool>(
-                  //     value: true,
-                  //     groupValue: numberSystem,
-                  //     onChanged: (value) {
-                  //       setState(() {
-                  //         numberSystem = value!;
-                  //       });
-                  //     },
-                  //   ),
-                  //   title: const Text('Arabic'),
-                  // ),
-                  // ListTile(
-                  //   leading: Radio<bool>(
-                  //     value: false,
-                  //     groupValue: numberSystem,
-                  //     onChanged: (value) {
-                  //       setState(() {
-                  //         numberSystem = value!;
-                  //       });
-                  //     },
-                  //   ),
-                  //   title: const Text('English'),
-                  // ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﰀ",
+                  style:
+                      TextStyle(fontFamily: 'quran', fontSize: mushafFontSize),
+                  textDirection: TextDirection.rtl,
+                ),
+                Slider(
+                    activeColor: Colors.green,
+                    inactiveColor: Colors.green.shade200,
+                    value: mushafFontSize,
+                    min: 20,
+                    max: 50,
+                    onChanged: (value) {
+                      setState(() {
+                        mushafFontSize = value;
+                      });
+                    }),
+                // const Padding(
+                //   padding: EdgeInsets.only(top: 10, bottom: 10),
+                //   child: Divider(),
+                // ),
+                // const Text(
+                //   'Index Numbering System:',
+                //   style: TextStyle(
+                //     fontWeight: FontWeight.bold,
+                //     fontSize: 15,
+                //   ),
+                // ),
+                // ListTile(
+                //   leading: Radio<bool>(
+                //     value: true,
+                //     groupValue: numberSystem,
+                //     onChanged: (value) {
+                //       setState(() {
+                //         numberSystem = value!;
+                //       });
+                //     },
+                //   ),
+                //   title: const Text('Arabic'),
+                // ),
+                // ListTile(
+                //   leading: Radio<bool>(
+                //     value: false,
+                //     groupValue: numberSystem,
+                //     onChanged: (value) {
+                //       setState(() {
+                //         numberSystem = value!;
+                //       });
+                //     },
+                //   ),
+                //   title: const Text('English'),
+                // ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Divider(),
+                ),
+                Obx(
+                  () => AnimatedToggleSwitch<bool>.dual(
+                    indicatorSize: const Size(40, 40),
+                    height: 40,
 
-                  const SizedBox(
-                    height: 20,
+                    current: controller.themeMode.value,
+                    onChanged: (i) {
+                      controller.themeMode.value = i;
+                      controller.changeTheme();
+                    },
+                    iconBuilder: (value) => value
+                        ? const Icon(Icons.nightlight,
+                            color: Colors.yellow, size: 32.0)
+                        : const Icon(Icons.light_mode,
+                            color: Colors.yellow, size: 32.0),
+                    style: ToggleStyle(
+                        backgroundColor: Theme.of(context).colorScheme.primary,
+                        borderColor: Colors.green,
+                        indicatorColor: Colors.green),
+                    first: true,
+                    second: false, // optional style settings
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              arabicFontSize = 28;
-                              mushafFontSize = 40;
-                              malayalamFontSize = 15;
-                              numberSystem = true;
-                            });
+                ),
 
-                            saveSettings();
-                            //Navigator.pop(context);
-                          },
-                          child: const Text('Reset')),
-                      ElevatedButton(
-                          onPressed: () {
-                            saveSettings();
-                            Navigator.pop(context);
-                          },
-                          child: const Text('Save')),
-                    ],
-                  ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            arabicFontSize = 28;
+                            mushafFontSize = 40;
+                            malayalamFontSize = 15;
+                            numberSystem = false;
+                          });
 
-                  //const Text('*Some settings will take effect after restart'),
-                ],
-              ),
+                          saveSettings();
+                          //Navigator.pop(context);
+                        },
+                        child: const Text('Reset')),
+                    ElevatedButton(
+                        onPressed: () {
+                          saveSettings();
+                          Navigator.pop(context);
+                        },
+                        child: const Text('Save')),
+                  ],
+                ),
+
+                //const Text('*Some settings will take effect after restart'),
+              ],
             ),
           ),
         ),
@@ -182,5 +224,6 @@ class _SettingsState extends State<Settings> {
     await prefs.setInt('malayalamFontSize', malayalamFontSize.toInt());
     await prefs.setInt('mushafFontSize', mushafFontSize.toInt());
     await prefs.setBool('numberSystem', numberSystem);
+    await prefs.setBool('theme', controller.themeMode.value);
   }
 }

@@ -21,8 +21,8 @@ class MyDrawer extends StatelessWidget {
         children: [
           DrawerHeader(
             decoration: const BoxDecoration(
-              color: Colors.white,
-            ),
+                //color: Colors.white,
+                ),
             child: Column(
               children: [
                 Image.asset(
@@ -50,15 +50,20 @@ class MyDrawer extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const Settings()));
             },
           ),
-          // ListTile(
-          //   leading: const Icon(
-          //     Icons.bookmark,
-          //   ),
-          //   title: const Text(
-          //     'Bookmarks',
-          //   ),
-          //   onTap: () {},
-          // ),
+          ListTile(
+            leading: const Icon(
+              Icons.shopping_cart,
+            ),
+            title: const Text(
+              'Islamic Shop',
+            ),
+            onTap: () async {
+              if (!await launchUrl(sunnahSouq,
+                  mode: LaunchMode.externalApplication)) {
+                throw 'Could not launch $sunnahSouq';
+              }
+            },
+          ),
           ListTile(
             leading: const Icon(
               Icons.apps,

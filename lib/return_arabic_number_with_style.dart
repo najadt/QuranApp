@@ -14,7 +14,7 @@ class ArabicSuraNumbers extends StatelessWidget {
     return Text(
       '\uFD3E' + (i + 1).toString().toArabicNumbers + '\uFD3F',
       style: TextStyle(
-          color: color ?? Color.fromARGB(255, 0, 0, 0),
+          color: Theme.of(context).colorScheme.onBackground.withAlpha(100),
           fontFamily: 'me_quran',
           fontSize: size ?? 18,
           shadows: [

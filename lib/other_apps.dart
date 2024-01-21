@@ -57,52 +57,53 @@ class OtherApps extends StatelessWidget {
     );
   }
 
-  ElevatedButton appTile({launchUrl, appName, icon, discription}) {
-    return ElevatedButton(
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            return const Color.fromARGB(255, 255, 255, 255);
-          },
-        ),
-      ),
-      onPressed: launchUrl,
-      child: Padding(
-        padding: const EdgeInsets.all(3.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                appName,
-                style: const TextStyle(
+  appTile({launchUrl, appName, icon, discription}) {
+    return GestureDetector(
+      onTap: launchUrl,
+      child: Card(
+        margin: const EdgeInsets.all(3.0),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  appName,
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black87),
-              ),
-            ),
-            Row(
-              children: [
-                Image.asset(
-                  icon,
-                  height: 80,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Text(
-                    discription,
-                    style: const TextStyle(color: Colors.black54),
+                    //color: Colors.black87
                   ),
                 ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-          ],
+              ),
+              Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      icon,
+                      height: 80,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Text(
+                      discription,
+                      //style: const TextStyle(color: Colors.black54
+                      //),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+            ],
+          ),
         ),
       ),
     );

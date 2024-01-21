@@ -3,6 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  flutter_pay_upi
   share_plus
   url_launcher_windows
 )

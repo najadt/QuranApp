@@ -1,8 +1,8 @@
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quran/controller/settings_controller.dart';
-import 'constants_variables.dart';
+import 'package:quran/settings/settings_controller.dart';
+import '../constants_variables.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Settings extends StatefulWidget {
@@ -118,68 +118,33 @@ class _SettingsState extends State<Settings> {
                         mushafFontSize = value;
                       });
                     }),
+
                 // const Padding(
                 //   padding: EdgeInsets.only(top: 10, bottom: 10),
                 //   child: Divider(),
                 // ),
-                // const Text(
-                //   'Index Numbering System:',
-                //   style: TextStyle(
-                //     fontWeight: FontWeight.bold,
-                //     fontSize: 15,
-                //   ),
-                // ),
-                // ListTile(
-                //   leading: Radio<bool>(
-                //     value: true,
-                //     groupValue: numberSystem,
-                //     onChanged: (value) {
-                //       setState(() {
-                //         numberSystem = value!;
-                //       });
+                // Obx(
+                //   () => AnimatedToggleSwitch<bool>.dual(
+                //     indicatorSize: const Size(40, 40),
+                //     height: 40,
+                //     current: controller.themeMode.value,
+                //     onChanged: (i) {
+                //       controller.themeMode.value = i;
+                //       controller.changeTheme(i);
                 //     },
+                //     iconBuilder: (value) => value
+                //         ? const Icon(Icons.nightlight,
+                //             color: Colors.yellow, size: 32.0)
+                //         : const Icon(Icons.light_mode,
+                //             color: Colors.yellow, size: 32.0),
+                //     style: ToggleStyle(
+                //         backgroundColor: Theme.of(context).colorScheme.primary,
+                //         borderColor: Colors.green,
+                //         indicatorColor: Colors.green),
+                //     first: true,
+                //     second: false,
                 //   ),
-                //   title: const Text('Arabic'),
                 // ),
-                // ListTile(
-                //   leading: Radio<bool>(
-                //     value: false,
-                //     groupValue: numberSystem,
-                //     onChanged: (value) {
-                //       setState(() {
-                //         numberSystem = value!;
-                //       });
-                //     },
-                //   ),
-                //   title: const Text('English'),
-                // ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: Divider(),
-                ),
-                Obx(
-                  () => AnimatedToggleSwitch<bool>.dual(
-                    indicatorSize: const Size(40, 40),
-                    height: 40,
-
-                    current: controller.themeMode.value,
-                    onChanged: (i) {
-                      controller.themeMode.value = i;
-                      controller.changeTheme();
-                    },
-                    iconBuilder: (value) => value
-                        ? const Icon(Icons.nightlight,
-                            color: Colors.yellow, size: 32.0)
-                        : const Icon(Icons.light_mode,
-                            color: Colors.yellow, size: 32.0),
-                    style: ToggleStyle(
-                        backgroundColor: Theme.of(context).colorScheme.primary,
-                        borderColor: Colors.green,
-                        indicatorColor: Colors.green),
-                    first: true,
-                    second: false, // optional style settings
-                  ),
-                ),
 
                 const SizedBox(
                   height: 20,
@@ -187,7 +152,14 @@ class _SettingsState extends State<Settings> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ElevatedButton(
+                    ElevatedButton.icon(
+                        style: ButtonStyle(
+                          shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  side: const BorderSide(color: Colors.green))),
+                        ),
                         onPressed: () {
                           setState(() {
                             arabicFontSize = 28;
@@ -199,13 +171,40 @@ class _SettingsState extends State<Settings> {
                           saveSettings();
                           //Navigator.pop(context);
                         },
-                        child: const Text('Reset')),
-                    ElevatedButton(
+                        icon: const Icon(
+                          Icons.restore,
+                          color: Colors.green,
+                        ),
+                        label: Text(
+                          'Reset',
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium!
+                              .copyWith(color: Colors.green),
+                        )),
+                    ElevatedButton.icon(
+                        style: ButtonStyle(
+                          shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  side: const BorderSide(color: Colors.green))),
+                        ),
                         onPressed: () {
                           saveSettings();
                           Navigator.pop(context);
                         },
-                        child: const Text('Save')),
+                        icon: const Icon(
+                          Icons.save,
+                          color: Colors.green,
+                        ),
+                        label: Text(
+                          'Save',
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium!
+                              .copyWith(color: Colors.green),
+                        )),
                   ],
                 ),
 

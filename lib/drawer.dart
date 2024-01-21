@@ -4,7 +4,7 @@ import 'package:quran/support_dev.dart';
 import 'about.dart';
 import 'other_apps.dart';
 import 'package:share_plus/share_plus.dart';
-import 'settings.dart';
+import 'settings/settings.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyDrawer extends StatelessWidget {

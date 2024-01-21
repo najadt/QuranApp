@@ -1,6 +1,5 @@
 // ignore_for_file: non_constant_identifier_names, await_only_futures
 
-import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future getSettings() async {
@@ -18,7 +17,6 @@ Future getSettings() async {
     numberSystem = false;
     theme = false;
   }
-  print(theme);
 }
 
 String arabicFont = 'quran';

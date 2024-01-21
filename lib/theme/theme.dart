@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
 ThemeData lightMode = ThemeData(
+   floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: Colors.green),
+  elevatedButtonTheme: const ElevatedButtonThemeData(
+      style: ButtonStyle(
+          textStyle: MaterialStatePropertyAll(TextStyle(color: Colors.green)))),
+  textButtonTheme: const TextButtonThemeData(
+      style: ButtonStyle(
+    foregroundColor: MaterialStatePropertyAll(Colors.green),
+  )),
   appBarTheme: const AppBarTheme(backgroundColor: Colors.green),
   colorScheme: const ColorScheme.light(
     brightness: Brightness.light,
@@ -14,6 +23,15 @@ ThemeData lightMode = ThemeData(
 );
 
 ThemeData darkmode = ThemeData(
+  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: Color.fromARGB(255, 28, 64, 29)),
+  elevatedButtonTheme: const ElevatedButtonThemeData(
+      style: ButtonStyle(
+          textStyle: MaterialStatePropertyAll(TextStyle(color: Colors.green)))),
+  textButtonTheme: const TextButtonThemeData(
+      style: ButtonStyle(
+    foregroundColor: MaterialStatePropertyAll(Colors.green),
+  )),
   appBarTheme:
       const AppBarTheme(backgroundColor: Color.fromARGB(255, 28, 64, 29)),
   colorScheme: ColorScheme.dark(

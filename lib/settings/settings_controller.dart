@@ -5,8 +5,8 @@ import 'package:quran/theme/theme.dart';
 class SettingsController extends GetxController {
   RxBool themeMode = theme.obs;
 
-  void changeTheme() {
-    Get.changeTheme(Get.isDarkMode ? lightMode : darkmode);
-    //print(themeMode);
+  void changeTheme(i) {
+    Get.changeTheme(!i ? lightMode : darkmode);
+    print(Get.isDarkMode);
   }
 }

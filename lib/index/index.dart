@@ -52,7 +52,6 @@ class FAB extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       tooltip: 'Go to bookmark',
-      backgroundColor: Colors.green,
       onPressed: () async {
         controller.fabIsClicked = true;
         if (await controller.readBookmark() == true) {

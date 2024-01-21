@@ -12,6 +12,7 @@ class ArabicSuraNumbers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
+      // ignore: prefer_interpolation_to_compose_strings
       '\uFD3E' + (i + 1).toString().toArabicNumbers + '\uFD3F',
       style: TextStyle(
           color: Theme.of(context).colorScheme.onBackground.withAlpha(100),
@@ -19,7 +20,7 @@ class ArabicSuraNumbers extends StatelessWidget {
           fontSize: size ?? 18,
           shadows: [
             Shadow(
-              offset: Offset(.5, .5),
+              offset: const Offset(.5, .5),
               blurRadius: 1.0,
               color: color ?? Colors.amberAccent,
             ),
